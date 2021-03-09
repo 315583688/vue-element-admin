@@ -91,7 +91,19 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
-        meta: { title: 'documentation', icon: 'documentation', affix: true }
+        meta: { title: 'documentation', icon: 'documentation', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/supplier',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/supplier/index'),
+        name: 'Supplier',
+        meta: { title: 'supplier', icon: 'table', noCache: true }
       }
     ]
   },
