@@ -83,15 +83,43 @@ export const constantRoutes = [
       }
     ]
   },
+  // {
+  //   path: '/documentation',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/documentation/index'),
+  //       name: 'Documentation',
+  //       meta: { title: 'documentation', icon: 'documentation', noCache: true }
+  //     }
+  //   ]
+  // },
   {
-    path: '/documentation',
+    path: '/system',
     component: Layout,
+    meta: {
+      title: 'system',
+      icon: 'el-icon-s-tools'
+    },
     children: [
       {
-        path: 'index',
-        component: () => import('@/views/documentation/index'),
-        name: 'Documentation',
-        meta: { title: 'documentation', icon: 'documentation', noCache: true }
+        path: 'user',
+        component: () => import('@/views/system/user'),
+        name: 'User',
+        meta: { title: 'user', icon: 'user', noCache: true }
+      },
+      {
+        path: 'role',
+        component: () => import('@/views/system/role'),
+        name: 'Role',
+        meta: { title: 'role', icon: 'people', noCache: true }
+      },
+      {
+        path: 'permission',
+        component: () => import('@/views/system/permission'),
+        name: 'Permission',
+        meta: { title: 'permission', icon: 'lock', noCache: true }
       }
     ]
   },
@@ -103,7 +131,48 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/supplier/index'),
         name: 'Supplier',
-        meta: { title: 'supplier', icon: 'table', noCache: true }
+        meta: { title: 'supplier', icon: 'peoples', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/goods',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/goods/index'),
+        name: 'Goods',
+        meta: { title: 'goods', icon: 'list', noCache: true }
+      }
+    ]
+  },
+
+  {
+    path: '/plan',
+    component: Layout,
+    meta: {
+      title: 'plan',
+      icon: 'table'
+    },
+    children: [
+      {
+        path: 'month',
+        component: () => import('@/views/plan/month'),
+        name: 'Month',
+        meta: { title: 'month', icon: 'list', noCache: true }
+      },
+      {
+        path: 'week',
+        component: () => import('@/views/plan/week'),
+        name: 'Week',
+        meta: { title: 'week', icon: 'list', noCache: true }
+      },
+      {
+        path: 'day',
+        component: () => import('@/views/plan/day'),
+        name: 'Day',
+        meta: { title: 'day', icon: 'list', noCache: true }
       }
     ]
   },
