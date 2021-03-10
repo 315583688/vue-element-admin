@@ -62,7 +62,7 @@ export default {
         },
         xAxis: [{
           type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月'],
           axisTick: {
             alignWithLabel: true
           }

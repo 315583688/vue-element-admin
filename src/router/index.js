@@ -166,13 +166,60 @@ export const constantRoutes = [
         path: 'week',
         component: () => import('@/views/plan/week'),
         name: 'Week',
-        meta: { title: 'week', icon: 'list', noCache: true }
+        meta: { title: 'week', icon: 'education', noCache: true }
       },
       {
         path: 'day',
         component: () => import('@/views/plan/day'),
         name: 'Day',
-        meta: { title: 'day', icon: 'list', noCache: true }
+        meta: { title: 'day', icon: 'edit', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/syncdata',
+    component: Layout,
+    redirect: '/syncdata/index',
+    children: [
+      {
+        path: 'syncdata',
+        component: () => import('@/views/syncdata/index'),
+        name: 'Syncdata',
+        meta: { title: 'NC库存同步', icon: 'international', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/allchart',
+    component: Layout,
+    meta: {
+      title: 'allchart',
+      icon: 'chart'
+    },
+    children: [
+      {
+        path: 'jiaofu',
+        component: () => import('@/views/plan/month'),
+        name: 'Jiaofu',
+        meta: { title: 'jiaofu', icon: 'list', noCache: true }
+      },
+      {
+        path: 'shijian',
+        component: () => import('@/views/plan/week'),
+        name: 'Shijian',
+        meta: { title: 'shijian', icon: 'list', noCache: true }
+      },
+      {
+        path: 'chayi',
+        component: () => import('@/views/plan/day'),
+        name: 'Chayi',
+        meta: { title: 'chayi', icon: 'list', noCache: true }
+      },
+      {
+        path: 'wanchenglv',
+        component: () => import('@/views/plan/day'),
+        name: 'Wanchenglv',
+        meta: { title: 'wanchenglv', icon: 'list', noCache: true }
       }
     ]
   },
