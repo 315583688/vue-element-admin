@@ -18,6 +18,9 @@
         {{ $t('table.add') }}
       </el-button>
       <el-button v-waves :loading="downloadLoading" class="filter-item" type="primary" icon="el-icon-download" @click="handleDownload">
+        {{ $t('table.import') }}
+      </el-button>
+      <el-button v-waves :loading="downloadLoading" class="filter-item" type="primary" icon="el-icon-upload2" @click="handleDownload">
         {{ $t('table.export') }}
       </el-button>
       <el-checkbox v-model="showReviewer" class="filter-item" style="margin-left:15px;" @change="tableKey=tableKey+1">
@@ -153,10 +156,10 @@ import { parseTime } from '@/utils'
 import Pagination from '@/components/Pagination' // secondary package based on el-pagination
 
 const calendarTypeOptions = [
-  { key: 'CN', display_name: 'China' },
-  { key: 'US', display_name: 'USA' },
-  { key: 'JP', display_name: 'Japan' },
-  { key: 'EU', display_name: 'Eurozone' }
+  { key: 'CN', display_name: '一类' },
+  { key: 'US', display_name: '二类' },
+  { key: 'JP', display_name: '三类' },
+  { key: 'EU', display_name: '四类' }
 ]
 
 // arr to obj, such as { CN : "China", US : "USA" }

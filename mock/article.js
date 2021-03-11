@@ -10,9 +10,9 @@ for (let i = 0; i < count; i++) {
   List.push(Mock.mock({
     id: '@increment',
     timestamp: +Mock.Random.date('T'),
-    author: '@first',
+    author: '@cname' +'@city',
     reviewer: '@first',
-    title: '@title(2, 2)',
+    title: '@cparagraph(1)',
     content_short: 'mock data',
     content: baseContent,
     forecast: '@float(0, 100, 2, 2)',
@@ -113,4 +113,3 @@ module.exports = [
     }
   }
 ]
-
