@@ -185,7 +185,7 @@ export const constantRoutes = [
         path: 'syncdata',
         component: () => import('@/views/syncdata/index'),
         name: 'Syncdata',
-        meta: { title: 'NC库存同步', icon: 'international', noCache: true }
+        meta: { title: 'syncdata', icon: 'international', noCache: true }
       }
     ]
   },
@@ -539,6 +539,7 @@ const router = createRouter()
 // Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
 export function resetRouter() {
   const newRouter = createRouter()
+  console.log(newRouter)
   router.matcher = newRouter.matcher // reset router
 }
 

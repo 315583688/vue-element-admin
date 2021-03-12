@@ -15,6 +15,7 @@ export default {
     shijian: '时间进度',
     chayi: '计划差异',
     wanchenglv: '完成率',
+    syncdata: 'NC库存同步',
     documentation: '文档',
     guide: '引导页',
     permission: '权限管理',
