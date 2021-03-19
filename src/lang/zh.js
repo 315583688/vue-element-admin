@@ -10,6 +10,7 @@ export default {
     system: '系统管理',
     user: '用户管理',
     role: '角色管理',
+    permiss: '权限管理',
     allchart: '统计',
     jiaofu: '交付情况',
     shijian: '时间进度',

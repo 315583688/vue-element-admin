@@ -83,18 +83,6 @@ export const constantRoutes = [
       }
     ]
   },
-  // {
-  //   path: '/documentation',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/documentation/index'),
-  //       name: 'Documentation',
-  //       meta: { title: 'documentation', icon: 'documentation', noCache: true }
-  //     }
-  //   ]
-  // },
   {
     path: '/system',
     component: Layout,
@@ -116,10 +104,10 @@ export const constantRoutes = [
         meta: { title: 'role', icon: 'people', noCache: true }
       },
       {
-        path: 'permission',
+        path: 'permiss',
         component: () => import('@/views/system/permission'),
-        name: 'Permission',
-        meta: { title: 'permission', icon: 'lock', noCache: true }
+        name: 'Permiss',
+        meta: { title: 'permiss', icon: 'lock', noCache: true }
       }
     ]
   },
